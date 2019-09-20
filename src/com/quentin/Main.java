@@ -5,7 +5,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * classe principale du jeu épique
+ * Classe principale du jeu épique
  *
  * @author Q-Jei
  * @version 1.0
@@ -29,7 +29,7 @@ public class Main {
      * Retourne un joueur en le créant grace aux caractéristiques rentrés au clavier
      *
      * @param idJoueur le numéro du joueur
-     * @return le personnage créé grace aux caractéristiques données par le joueur
+     * @return le personnage créé grâce aux caractéristiques données par le joueur
      */
     private static Joueur creerJoueur(int idJoueur) {
         Joueur j;
