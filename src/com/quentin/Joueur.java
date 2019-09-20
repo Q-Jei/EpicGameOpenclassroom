@@ -1,5 +1,12 @@
 package com.quentin;
 
+/**
+ * classe Joueur
+ *
+ * @author Q-Jei
+ * @version 1.0
+ */
+
 public abstract class Joueur {
 
     protected String cri;
@@ -14,13 +21,13 @@ public abstract class Joueur {
     /**
      * Constructeur de Joueur
      *
-     * @param numJoueur le numéro du joueur
+     * @param idJoueur le numéro du joueur
      * @param force le force du joueur
      * @param agilite l'agilité du joueur
      * @param intelligence l'intelligence du joueur
      */
-    Joueur(int numJoueur, int force, int agilite, int intelligence) {
-        nom = "Joueur " + numJoueur;
+    Joueur(int idJoueur, int force, int agilite, int intelligence) {
+        nom = "Joueur " + idJoueur;
         this.force = force;
         this.agilite = agilite;
         this.intelligence = intelligence;
