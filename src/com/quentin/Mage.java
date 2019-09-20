@@ -28,4 +28,39 @@ public class Mage extends Joueur {
         type = "Mage";
         cri = "Abracadabra";
     }
+
+    /**
+     * En fonction du choix, effectue les actions propres à la classe du joueur Mage
+     * Boule de feu ou Soin
+     *
+     * @param choix choix de l'action
+     * @see Rodeur#jouer(int)
+     * @see Joueur#jouer(int)
+     * @see Guerrier#jouer(int)
+     * @return phrase de l'action
+     */
+    @Override
+    protected String jouer(int choix) {
+        String phrase = "";
+        switch (choix) {
+            case 1:
+                adversaire.supprVie(intelligence);
+                phrase = phrase + nom + " utilise boule de feu et inflige " + intelligence + " de dégâts";
+                break;
+            case 2:
+                //Soin
+                phrase = phrase + nom + " utilise Soin et gagne ";
+                if ((intelligence * 2) + vie > santeMax) {
+                    phrase = phrase + (santeMax - vie) + " de vitalité";
+                    vie = santeMax;
+                } else {
+                    phrase = phrase + (intelligence * 2) + " de vitalité";
+                    vie = vie + (intelligence * 2);
+                }
+                break;
+            default:
+                break;
+        }
+        return phrase;
+    }
 }
